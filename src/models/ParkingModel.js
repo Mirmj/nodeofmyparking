@@ -20,9 +20,13 @@ const parkingSchema = new Schema({
         enum: ["Road", "Ground", "Building"],
         required: true 
     },
+    floor: {
+        type: Number,
+    },
+
     ParkingOwnerId: {
         type: Schema.Types.ObjectId,
-        ref: "roles"
+        ref: "users"
     },
     stateId: {
         type: Schema.Types.ObjectId,

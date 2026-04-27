@@ -1,6 +1,6 @@
 const routes = require('express').Router();
 const reservationController = require('../controllers/ReservationContoller'); // Fixed spelling
-const auth = require('../utils/middlewere/auth'); // Fixed spelling
+const auth = require('../middlewere/AuthMiddleware'); 
 
 // Protected routes
 routes.use(auth); // Applies to all routes below

@@ -1,7 +1,5 @@
 const parkingModel = require("../models/ParkingModel");
 
-
-
 const addParking = async (req, res) => {
   try {
     const savedParkings = await parkingModel.create(req.body);
@@ -20,7 +18,7 @@ const getAllParkings = async (req, res) => {
 
     try{
         
-        const parkings = await parkingModel.find().populate("roleId stateId cityId areaId");
+        const parkings = await parkingModel.find().populate("ParkingOwnerId stateId cityId areaId");
         res.status(200).json({
             message: "All parkings fetched successfully",
             data: parkings

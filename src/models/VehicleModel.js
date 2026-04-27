@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const vehicleSchema = new Schema({
     userId:{
         type:Schema.Types.ObjectId,
-        ref:"user"
+        ref:"users"
     },
     registrationNumber:{
         type:String,

@@ -8,7 +8,7 @@ routes.delete('/user/:id',userController.deleteUser)
 routes.get('/users/:id',userController.getUserById)
 routes.post('/user/signup',userController.signUp)
 routes.post('/user/login',userController.loginUser)
-routes.post('/forgetpass',userController.forgotPassword)
+routes.post('/forgotpassword/:email',userController.forgotPassword)
 routes.post('/user/resetpassword',userController.resetpassword)
 
 
